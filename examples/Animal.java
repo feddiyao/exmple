@@ -1,10 +1,6 @@
 import java.util.*;
 abstract class Animal{
-	private Integer animalNo;
-	
-	private String animalNumber;
-	
-	private String animalType;
+	private Integer animalIdNo;
 	
 	private String animalName;
 
@@ -14,12 +10,8 @@ abstract class Animal{
 
 	private List<String> animalImg = new ArrayList<String>();
 	
-	public Integer getAnimalNo(){return animalNo;}
-	public void setAnimalNo(Integer animalNo){this.animalNo = animalNo;}
-	public Integer getAnimalNumber(){return animalNumber;}
-	public void setAnimalIdNumber(Integer animalNumber){this.animalNumber = animalNumber;}
-	public Integer getAnimalType(){return animalType;}
-	public void setAnimalIdType(Integer animalType){this.animalType = animalType;}
+	public Integer getAnimalNo(){return animalIdNo;}
+	public void setAnimalIdNo(Integer animalIdNo){this.animalIdNo = animalIdNo;}
 	public String getAnimalName(){return animalName;}
 	public void setAnimalName(String animalName){this.animalName = animalName;}
 	public String getOriginPlace(){return originPlace;}
@@ -29,5 +21,5 @@ abstract class Animal{
 	public List<String> getAnimalImg(){return animalImg;}
 	public void setAnimalImg(List<String> animalImg){this.animalImg = animalImg;}
 	
-	public void eat(){};
+	abstract void eat();
 }
