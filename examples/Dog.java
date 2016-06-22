@@ -1,18 +1,13 @@
 import java.util.*;
 public class Dog extends Animal{
 	private String dogType;
-	private Integer meatNumber;
+	private Meat meat;
 	
 	public String getDogType(){return dogType;}
 	public void setDogType(String dogType){this.dogType = dogType;}
-	public Integer getMeatNumber(){return meatNumber;}
-	public void setMeatNumber(Integer meatNumber){this.meatNumber = meatNumber;}
+	public Meat getMeat(){return meat;}
+	public void setMeat(Meat meat){this.meat = meat;}
 	public void eat(){
-		if(this.meatNumber > 0){
-			this.meatNumber--;
-		}
-		else{
-			System.out.println("There is no meat");
-		}
+		System.out.println(this.meat.getMeatType());
 	}
 }

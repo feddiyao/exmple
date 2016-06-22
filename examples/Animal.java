@@ -1,5 +1,5 @@
 import java.util.*;
-abstract class Animal{
+public abstract class Animal{
 	private Integer animalIdNo;
 	
 	private String animalName;
@@ -25,10 +25,10 @@ abstract class Animal{
 		this.animalName = animalName;
 		}
 	public String getAnimalColor(){
-		return aniamlColor;
+		return animalColor;
 		}
 	public void setAnimalColor(String animalColor){
-		this.aniamColor=animalColor;
+		this.animalColor=animalColor;
 		}
 	public String getOriginPlace(){
 		return originPlace;

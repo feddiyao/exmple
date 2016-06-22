@@ -1,15 +1,10 @@
 import java.util.*;
 public class Cat extends Animal{
-	private Integer fishNumber;
+	private Fish fish;
 	
-	public Integer getFishNumber(){return fishNumber;}
-	public void setFishNumber(Integer fishNumber){this.fishNumber=fishNumber;}
+	public Fish getFish(){return fish;}
+	public void setFish(Fish fish){this.fish=fish;}
 	public void eat(){
-		if (this.fishNumber > 0){
-			this.fishNumber--;	
-		}
-		else{
-			System.out.println("There is no fish");
-		}
+		System.out.println(this.fish.getAnimalName());
 	}
 }
