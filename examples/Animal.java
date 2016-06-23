@@ -12,7 +12,7 @@ public abstract class Animal{
 
 	private List<String> animalImg = new ArrayList<String>();
 	
-	public Integer getAnimalNo(){
+	public Integer getAnimalIdNo(){
 		return animalIdNo;
 		}
 	public void setAnimalIdNo(Integer animalIdNo){
