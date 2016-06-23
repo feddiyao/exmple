@@ -10,4 +10,7 @@ public class Dog extends Animal{
 	public void eat(){
 		System.out.println(this.meat.getMeatType());
 	}
+	public String toString(){
+		return super.toString() + "dog's meat:" + this.meat.getMeatType();
+	}
 }

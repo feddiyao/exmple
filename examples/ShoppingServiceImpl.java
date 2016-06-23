@@ -16,6 +16,7 @@ public class ShoppingServiceImpl implements ShoppingService{
 		Dog Adog = new Dog();
 		Adog.setAnimalIdNo(animalIdNo);
 		Adog.setAnimalName(animalName);
+		Adog.setAnimalColor(animalColor);
 		Adog.setDogType(dogType);
 		Adog.setOriginPlace(originPlace);
 		Adog.setBloodTies(bloodTies);
