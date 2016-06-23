@@ -7,4 +7,7 @@ public class Cat extends Animal{
 	public void eat(){
 		System.out.println(this.fish.getAnimalName());
 	}
+	public String toString(){
+		return super.toString() + "cat's fish:" + this.fish.getAnimalName();
+	}
 }

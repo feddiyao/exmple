@@ -48,6 +48,11 @@ public abstract class Animal{
 	public void setAnimalImg(List<String> animalImg){
 		this.animalImg = animalImg;
 		}
+	public String toString(){
+		return "cat's no:" + this.animalIdNo + "cat's name:" + this.animalName + "cat's color:" + this.animalColor + "cat's originplace:" + this.originPlace + "cat's bloodties:" + this.bloodTies;
+	}
+	
 	
 	abstract void eat();
+	
 }

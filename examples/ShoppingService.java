@@ -6,6 +6,6 @@ public interface ShoppingService{
 	void printDogInfoByAnimalNo(List<Dog> dog,Integer animalNo);
 	List<Cat> buyCat(List<Cat> cat,Integer animalNo);
 	List<Dog> buyDog(List<Dog> dog,Integer animalNo);
-	Cat enterCatInfo(Integer animalNo,Integer animalNunber,String animalType,String animalName,String originPlace,String bloodTies,List<String> animalImg,Integer fishNumber);
-	Dog enterDogInfo(Integer animalNo,Integer animalNumber,String dogType,String animalType,String animalName,String originPlace,String bloodTies,List<String> animalImg,Integer meatNumber);
+	Cat enterCatInfo(Integer animalIdNo,String animalName,String animalColor,String originPlace,String bloodTies,List<String> animalImg,Fish fish);
+	Dog enterDogInfo(Integer animalIdNo,String dogType,String animalName,String animalColor,String originPlace,String bloodTies,List<String> animalImg,Meat meat);
 }

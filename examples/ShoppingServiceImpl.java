@@ -1,29 +1,27 @@
 import java.io.*;
 import java.util.*;
 public class ShoppingServiceImpl implements ShoppingService{
-	public Cat enterCatInfo(Integer animalNo,Integer animalNumber,String animalType,String animalName,String originPlace,String bloodTies,List<String> animalImg,Integer fishNumber){
+	public Cat enterCatInfo(Integer animalIdNo,String animalName,String animalColor,String originPlace,String bloodTies,List<String> animalImg,Fish fish){
 		Cat Acat = new Cat();
-		Acat.setAnimalNo(animalNo);
+		Acat.setAnimalIdNo(animalIdNo);
 		Acat.setAnimalName(animalName);
-		Acat.setAnimalType(animalType);
+		Acat.setAnimalColor(animalColor);
 		Acat.setAnimalNumber(animalNumber);
 		Acat.setOriginPlace(originPlace);
 		Acat.setBloodTies(bloodTies);
 		Acat.setAnimalImg(animalImg);
-		Acat.setFishNumber(fishNumber);
+		Acat.setFish(fish);
 		return Acat;
 	}
-	public Dog enterDogInfo(Integer animalNo,Integer animalNumber,String dogType,String animalType,String animalName,String originPlace,String bloodTies,List<String> animalImg,Integer meatNumber){
+	public Dog enterDogInfo(Integer animalIdNo,String dogType,String animalName,String animalColor,String originPlace,String bloodTies,List<String> animalImg,Meat meat){
 		Dog Adog = new Dog();
-		Adog.setAnimalNo(animalNo);
+		Adog.setAnimalIdNo(animalIdNo);
 		Adog.setAnimalName(animalName);
-		Adog.setAnimalType(animalType);
-		Adog.setAnimalNumber(animalNumber);
 		Adog.setDogType(dogType);
 		Adog.setOriginPlace(originPlace);
 		Adog.setBloodTies(bloodTies);
 		Adog.setAnimalImg(animalImg);
-		Adog.setMeatNumber(meatNumber);
+		Adog.setMeat(meat);
 		return Adog;
     }
 	public void printCatInfo(List<Cat> cat){
