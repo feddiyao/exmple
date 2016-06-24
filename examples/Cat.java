@@ -8,6 +8,6 @@ public class Cat extends Animal{
 		System.out.println(this.fish.getAnimalName());
 	}
 	public String toString(){
-		return super.toString() + "cat's fish:" + this.fish.getAnimalName();
+		return super.toString() + '\n' + "cat's fish:" + this.fish.getAnimalName();
 	}
 }

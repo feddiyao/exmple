@@ -49,7 +49,7 @@ public abstract class Animal{
 		this.animalImg = animalImg;
 		}
 	public String toString(){
-		return "cat's no:" + this.animalIdNo + "cat's name:" + this.animalName + "cat's color:" + this.animalColor + "cat's originplace:" + this.originPlace + "cat's bloodties:" + this.bloodTies;
+		return "cat's no:" + this.animalIdNo + '\n' + "cat's name:" + this.animalName + '\n' + "cat's color:" + this.animalColor + '\n' + "cat's originplace:" + this.originPlace + '\n' + "cat's bloodties:" + this.bloodTies;
 	}
 	
 	

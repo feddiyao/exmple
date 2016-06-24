@@ -11,6 +11,6 @@ public class Dog extends Animal{
 		System.out.println(this.meat.getMeatType());
 	}
 	public String toString(){
-		return super.toString() + "dog's meat:" + this.meat.getMeatType();
+		return super.toString() + '\n' + "dog's meat:" + this.meat.getMeatType();
 	}
 }
