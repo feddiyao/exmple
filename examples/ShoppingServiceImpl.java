@@ -2,54 +2,54 @@ import java.io.*;
 import java.util.*;
 public class ShoppingServiceImpl implements ShoppingService{
 	public Cat enterCatInfo(Integer animalIdNo,String animalName,String animalColor,String originPlace,String bloodTies,List<String> animalImg,Fish fish){
-		Cat Acat = new Cat();
-		Acat.setAnimalIdNo(animalIdNo);
-		Acat.setAnimalName(animalName);
-		Acat.setAnimalColor(animalColor);
-		Acat.setOriginPlace(originPlace);
-		Acat.setBloodTies(bloodTies);
-		Acat.setAnimalImg(animalImg);
-		Acat.setFish(fish);
-		return Acat;
+		Cat aCat = new Cat();
+		aCat.setAnimalIdNo(animalIdNo);
+		aCat.setAnimalName(animalName);
+		aCat.setAnimalColor(animalColor);
+		aCat.setOriginPlace(originPlace);
+		aCat.setBloodTies(bloodTies);
+		aCat.setAnimalImg(animalImg);
+		aCat.setFish(fish);
+		return aCat;
 	}
 	public Dog enterDogInfo(Integer animalIdNo,String dogType,String animalName,String animalColor,String originPlace,String bloodTies,List<String> animalImg,Meat meat){
-		Dog Adog = new Dog();
-		Adog.setAnimalIdNo(animalIdNo);
-		Adog.setAnimalName(animalName);
-		Adog.setAnimalColor(animalColor);
-		Adog.setDogType(dogType);
-		Adog.setOriginPlace(originPlace);
-		Adog.setBloodTies(bloodTies);
-		Adog.setAnimalImg(animalImg);
-		Adog.setMeat(meat);
-		return Adog;
+		Dog aDog = new Dog();
+		aDog.setAnimalIdNo(animalIdNo);
+		aDog.setAnimalName(animalName);
+		aDog.setAnimalColor(animalColor);
+		aDog.setDogType(dogType);
+		aDog.setOriginPlace(originPlace);
+		aDog.setBloodTies(bloodTies);
+		aDog.setAnimalImg(animalImg);
+		aDog.setMeat(meat);
+		return aDog;
     }
 	public void printCatInfo(List<Cat> cat){
-		for (Cat Acat : cat){
+		for (Cat aCat : cat){
 			System.out.println("welcome to our animal home");
-			if (Acat != null){
+			if (aCat != null){
 			System.out.println("==================");
-			System.out.println("cat's no:" + Acat.getAnimalIdNo());
-			System.out.println("cat's name:" + Acat.getAnimalName());
+			System.out.println("cat's no:" + aCat.getAnimalIdNo());
+			System.out.println("cat's name:" + aCat.getAnimalName());
 			}
 		}
 	}
 	public void printDogInfo(List<Dog> dog){
-		for (Dog Adog : dog){
-			if (Adog != null){
+		for (Dog aDog : dog){
+			if (aDog != null){
 			System.out.println("==================");
-			System.out.println("dog's no:" + Adog.getAnimalIdNo());
-			System.out.println("dog's name:" + Adog.getAnimalName());
+			System.out.println("dog's no:" + aDog.getAnimalIdNo());
+			System.out.println("dog's name:" + aDog.getAnimalName());
 			}
 		}
 	}
 	
 	public void printCatInfoByAnimalNo(List<Cat> cat,Integer animalIdNo){
-		for (Cat Acat : cat){
-			if (Acat != null && Acat.getAnimalIdNo().equals(animalIdNo)){
-				System.out.println(Acat.toString());
-				if (Acat.getAnimalImg() != null){
-					for (String Image : Acat.getAnimalImg()){
+		for (Cat aCat : cat){
+			if (aCat != null && aCat.getAnimalIdNo().equals(animalIdNo)){
+				System.out.println(aCat.toString());
+				if (aCat.getAnimalImg() != null){
+					for (String Image : aCat.getAnimalImg()){
 						System.out.println("cat's Img:" + Image);
 					}
 				}
@@ -57,16 +57,16 @@ public class ShoppingServiceImpl implements ShoppingService{
 		}
 	}
 	public void printDogInfoByAnimalNo(List<Dog> dog,Integer animalIdNo){
-		for (Dog Adog : dog){
-			if (Adog != null && Adog.getAnimalIdNo().equals(animalIdNo)){
-				System.out.println("dog's no:" + Adog.getAnimalIdNo());
-				System.out.println("dog's name:" + Adog.getAnimalName());
-				System.out.println("dog's originplace:" + Adog.getOriginPlace());
-				System.out.println("dog's bloodties:" + Adog.getBloodTies());
-				System.out.println("dog's type:" + Adog.getDogType());
-				System.out.println("dog's meat:" + Adog.getMeat());
-				if (Adog.getAnimalImg() != null){
-					for (String Image : Adog.getAnimalImg()){
+		for (Dog aDog : dog){
+			if (aDog != null && aDog.getAnimalIdNo().equals(animalIdNo)){
+				System.out.println("dog's no:" + aDog.getAnimalIdNo());
+				System.out.println("dog's name:" + aDog.getAnimalName());
+				System.out.println("dog's originplace:" + aDog.getOriginPlace());
+				System.out.println("dog's bloodties:" + aDog.getBloodTies());
+				System.out.println("dog's type:" + aDog.getDogType());
+				System.out.println("dog's meat:" + aDog.getMeat());
+				if (aDog.getAnimalImg() != null){
+					for (String Image : aDog.getAnimalImg()){
 						System.out.println("dog's Img:" + Image);
 					}
 				}
@@ -74,30 +74,30 @@ public class ShoppingServiceImpl implements ShoppingService{
 				Scanner answerIn= new Scanner(System.in);
 				String answer = answerIn.nextLine();
 				if (answer.equals("yes")){
-					Adog.eat();
-					System.out.println("dog's meat:" + Adog.getMeat());
+					aDog.eat();
+					System.out.println("dog's meat:" + aDog.getMeat());
 				}
 			}
 		}
 	}
 	public List<Cat> buyCat(List<Cat> cat,Integer animalIdNo){
 		List<Cat> cats = new ArrayList<Cat>();
-		for (Cat Acat : cat){
-			if (Acat != null && Acat.getAnimalIdNo().equals(animalIdNo)){
+		for (Cat aCat : cat){
+			if (aCat != null && aCat.getAnimalIdNo().equals(animalIdNo)){
 			System.out.println("success!");
 			}else{
-				cats.add(Acat);
+				cats.add(aCat);
 			}	
 		}
 		return cats;
 	}
 	public List<Dog> buyDog(List<Dog> dog,Integer animalNo){
 		List<Dog> dogs = new ArrayList<Dog>();
-		for (Dog Adog : dog){
-			if (Adog != null && Adog.getAnimalIdNo().equals(animalNo)){
+		for (Dog aDog : dog){
+			if (aDog != null && aDog.getAnimalIdNo().equals(animalNo)){
 			System.out.println("success!");
 			}else{
-				dogs.add(Adog);
+				dogs.add(aDog);
 			}	
 		}
 		return dogs;

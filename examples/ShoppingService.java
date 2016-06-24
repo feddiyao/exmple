@@ -8,4 +8,6 @@ public interface ShoppingService{
 	List<Dog> buyDog(List<Dog> dog,Integer animalIdNo);
 	Cat enterCatInfo(Integer animalIdNo,String animalName,String animalColor,String originPlace,String bloodTies,List<String> animalImg,Fish fish);
 	Dog enterDogInfo(Integer animalIdNo,String dogType,String animalName,String animalColor,String originPlace,String bloodTies,List<String> animalImg,Meat meat);
+	Fish enterFishInfo(Integer animalIdNo,String animalName,String animalColor,String originPlace,String bloodTies,List<String> animalImg,String fishSize,String fishHabit);
+	Meat enterMeatInfo(Integer meatId,String meatType,String meatSize);
 }
