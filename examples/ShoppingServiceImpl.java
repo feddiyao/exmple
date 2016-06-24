@@ -102,4 +102,23 @@ public class ShoppingServiceImpl implements ShoppingService{
 		}
 		return dogs;
 	}
+	public Meat enterMeatInfo(Integer meatId,String meatType,String meatSize){
+		Meat aMeat = new Meat();
+		aMeat.setMeatId(meatId);
+		aMeat.setMeatType(meatType);
+		aMeat.setMeatSize(meatSize);
+		return aMeat;
+	}
+	public Fish enterFishInfo(Integer animalIdNo,String animalName,String animalColor,String originPlace,String bloodTies,List<String> animalImg,String fishSize,String fishHabit){
+		Fish aFish = new Fish();
+		aFish.setAnimalIdNo(animalIdNo);
+		aFish.setAnimalName(animalName);
+		aFish.setAnimalColor(animalColor);
+		aFish.setOriginPlace(originPlace);
+		aFish.setBloodTies(bloodTies);
+		aFish.setAnimalImg(animalImg);
+		aFish.setFishSize(fishSize);
+		aFish.setFishHabit(fishHabit);
+		return aFish;
+	}
 }

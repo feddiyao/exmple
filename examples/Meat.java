@@ -1,13 +1,13 @@
 import java.util.*;
 public class Meat{
-	private String meatId;
+	private Integer meatId;
 	private String meatType;
 	private String meatSize;
 	
-	public String getMeatId(){
+	public Integer getMeatId(){
 		return meatId;
 	}
-	public void setMeatId(String meatId){
+	public void setMeatId(Integer meatId){
 		this.meatId = meatId;
 	}
 	public String getMeatType(){

@@ -7,14 +7,19 @@ public class Shopping{
 		List<Cat> cats = new ArrayList<Cat>();
 		List<Dog> dogs = new ArrayList<Dog>();
 		List<String> imgs = new ArrayList<String>();
+		Fish aFish = new Fish();
+		Meat aMeat = new Meat();
 		imgs.add("lalala");
 		imgs.add("mmmmmm");
+		//输入Meat,Fish数据
+		aMeat = shoppingService.enterMeatInfo(1,"pork","big");
+		aFish = shoppingService.enterFishInfo(1,"huanyu","yellow","UK","Thoroughbred",imgs,"big","vegan");
 		//输入部分shopping home数据
-		cats.add(shoppingService.enterCatInfo(1,1,"Cat","zher","UK","Thoroughbred",imgs,2));
-		cats.add(shoppingService.enterCatInfo(2,2,"Cat","buou","American","Thoroughbred",imgs,1));
-		cats.add(shoppingService.enterCatInfo(3,3,"Cat","jiafei","China","UnThoroughbred",imgs,1));
-		dogs.add(shoppingService.enterDogInfo(4,3,"Dog","xunhui","jinmao","China","Thoroughbred",imgs,2));
-		dogs.add(shoppingService.enterDogInfo(5,2,"Dog","muyang","demu","Geman","Thoroughbred",imgs,2));
+		cats.add(shoppingService.enterCatInfo(1,"zher","yellow","UK","Thoroughbred",imgs,aFish));
+		cats.add(shoppingService.enterCatInfo(2,"buou","yellow","American","Thoroughbred",imgs,aFish));
+		cats.add(shoppingService.enterCatInfo(3,"jiafei","red","China","UnThoroughbred",imgs,aFish));
+		dogs.add(shoppingService.enterDogInfo(4,"xunhui","jinmao","yellow","China","Thoroughbred",imgs,aMeat));
+		dogs.add(shoppingService.enterDogInfo(5,"muyang","demu","black","Geman","Thoroughbred",imgs,aMeat));
 		//shopping home展示
 		System.out.println("There is all the information of Animals");
 		shopping.printAll(cats,dogs);
