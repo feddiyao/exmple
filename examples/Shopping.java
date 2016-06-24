@@ -3,7 +3,6 @@ import java.util.*;
 public class Shopping{
 	public static void main(String[] args){
 		ShoppingService shoppingService = new ShoppingServiceImpl();
-		Shopping shopping = new Shopping();
 		List<Cat> cats = new ArrayList<Cat>();
 		List<Dog> dogs = new ArrayList<Dog>();
 		List<String> imgs = new ArrayList<String>();
@@ -23,7 +22,7 @@ public class Shopping{
 		//shopping home展示
 		System.out.println("welcome to our animal home");
 		System.out.println("There is all the information of Animals");
-		shopping.printAll(cats,dogs);
+		printAll(cats,dogs);
 		while(!cats.isEmpty() || !dogs.isEmpty()){
 			//shopping home提供search，buy和add三项功能
 			System.out.println("Please enter search , buy , add");
@@ -48,20 +47,20 @@ public class Shopping{
 				dogs = shoppingService.buyDog(dogs,animalIdNo);
 			}else if (operation.equals("add")){
 				//执行添加商品功能
-				String animalType = shopping.stringInInfo("animalType");
-				Integer animalIdNo = shopping.intInInfo("animalIdNo");
-				String animalName = shopping.stringInInfo("animalName");
-				String animalColor = shopping.stringInInfo("animalColor");
-				String originPlace = shopping.stringInInfo("originPlace");
-				String bloodTies = shopping.stringInInfo("bloodTies");
+				String animalType = stringInInfo("animalType");
+				Integer animalIdNo = intInInfo("animalIdNo");
+				String animalName = stringInInfo("animalName");
+				String animalColor = stringInInfo("animalColor");
+				String originPlace = stringInInfo("originPlace");
+				String bloodTies = stringInInfo("bloodTies");
 				List<String> animalImg = new ArrayList<String>();
 				for (int i = 0;i < 3;i++){
-					String img = shopping.stringInInfo("animalImg");
+					String img = stringInInfo("animalImg");
 					animalImg.add(img);
 				}
 				//对于动物种类是狗的商品要额外做狗的种类的录入
 				if (animalType.equals("Dog")){
-					String dogType = shopping.stringInInfo("dogType");
+					String dogType = stringInInfo("dogType");
 					dogs.add(shoppingService.enterDogInfo(animalIdNo,dogType,animalName,animalColor,originPlace,bloodTies,animalImg,aMeat));
 				}else if (animalType.equals("Cat")){
 					cats.add(shoppingService.enterCatInfo(animalIdNo,animalName,animalColor,originPlace,bloodTies,animalImg,aFish));
@@ -69,11 +68,11 @@ public class Shopping{
 					System.out.println("You should enter the right animalType");
 				}
 			}
-			shopping.printAll(cats,dogs);
+			printAll(cats,dogs);
 		}
 		System.out.println("There is nothing in the shop!");
 	}
-	private Integer intInInfo(String systemInName){
+	private static Integer intInInfo(String systemInName){
 		System.out.println("Please enter" + systemInName);
 		try{
 			Scanner InName = new Scanner(System.in);
@@ -83,12 +82,12 @@ public class Shopping{
 			return 0 ;
 		}
 	}
-	private String stringInInfo(String systemInName){
+	private static String stringInInfo(String systemInName){
 		System.out.println("Please enter" + systemInName);
 		Scanner InNameIn = new Scanner(System.in);
 		return InNameIn.nextLine();
 	}
-	private  void printAll(List<Cat> cat,List<Dog> dog){
+	private static void printAll(List<Cat> cat,List<Dog> dog){
 		ShoppingService shoppingService = new ShoppingServiceImpl();
 		shoppingService.printCatInfo(cat);
 		shoppingService.printDogInfo(dog);

@@ -26,7 +26,6 @@ public class ShoppingServiceImpl implements ShoppingService{
     }
 	public void printCatInfo(List<Cat> cat){
 		for (Cat aCat : cat){
-			System.out.println("welcome to our animal home");
 			if (aCat != null){
 			System.out.println("==================");
 			System.out.println("cat's no:" + aCat.getAnimalIdNo());
