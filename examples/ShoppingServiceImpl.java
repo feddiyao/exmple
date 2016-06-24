@@ -53,18 +53,19 @@ public class ShoppingServiceImpl implements ShoppingService{
 						System.out.println("cat's Img:" + Image);
 					}
 				}
+				System.out.println("Do you want to see this cat eat fish?");
+				Scanner answerIn= new Scanner(System.in);
+				String answer = answerIn.nextLine();
+				if (answer.equals("yes")){
+					aCat.eat();
+				}
 			}
 		}
 	}
 	public void printDogInfoByAnimalNo(List<Dog> dog,Integer animalIdNo){
 		for (Dog aDog : dog){
 			if (aDog != null && aDog.getAnimalIdNo().equals(animalIdNo)){
-				System.out.println("dog's no:" + aDog.getAnimalIdNo());
-				System.out.println("dog's name:" + aDog.getAnimalName());
-				System.out.println("dog's originplace:" + aDog.getOriginPlace());
-				System.out.println("dog's bloodties:" + aDog.getBloodTies());
-				System.out.println("dog's type:" + aDog.getDogType());
-				System.out.println("dog's meat:" + aDog.getMeat());
+				System.out.println(aDog.toString());
 				if (aDog.getAnimalImg() != null){
 					for (String Image : aDog.getAnimalImg()){
 						System.out.println("dog's Img:" + Image);
@@ -75,7 +76,6 @@ public class ShoppingServiceImpl implements ShoppingService{
 				String answer = answerIn.nextLine();
 				if (answer.equals("yes")){
 					aDog.eat();
-					System.out.println("dog's meat:" + aDog.getMeat());
 				}
 			}
 		}
